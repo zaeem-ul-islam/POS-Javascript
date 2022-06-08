@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Main Page</title>
+    <link rel="stylesheet" href="/components/css/panel.css">
+    <!-- Font awesome cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+</head>
+<body style="background-color:rgb(68, 68, 68); color:white;" >
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" >
+            <div class="sidebar-header">
+                <h3>Alpha Shop</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+               
+                <li class="active">
+                    <a href="/components/Admin/main.html">Dashboard</a>
+                </li>
+                <li class="active">
+                    <a href="/components/Admin/Additem.html">Add Item</a>
+                </li>
+                <li class="active">
+                    <a href="/components/cashierPages/Record.html">Record</a>
+                </li>
+                <li class="active">
+                    <a href="/components/cashierPages/Stock.html">See Stock</a>
+                </li>
+                <li class="active">
+                    <a href="/components/Admin/Acount.html">Acount</a>
+                </li>
+                <li class="nav-item active text-danger">
+                    <a class="nav-link" href="/components/Adminlogin.html"><i class="bi bi-box-arrow-in-right"></i></i> Logout</a>
+                </li>
+            </ul>
+
+       
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        
+                    </button>
+                    
+                    <form class="form-inline my-2 my-lg-0 m-4">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                 
+                </div>
+            </nav>
+
+            <h4 class="m-4">Dashboard</h4>
+            <div class="card-columns">
+                <div class="card bg-primary">
+                  <div class="card-body text-center">
+                    <h2><a href="/components/Admin/Additem.html"><i class="bi bi-plus-square" ></i></i>Add Item</a></h2>
+                  </div>
+                </div>
+                <div class="card bg-warning">
+                  <div class="card-body text-center">
+                    <h2><a href="/components/cashierPages/Record.html"><i class="bi bi-cash-coin"></i>Record</a></h2>
+                  </div>
+                </div>
+                <div class="card bg-success">
+                  <div class="card-body text-center">
+                    <h2><a href="/components/cashierPages/Stock.html"><i class="bi bi-list-check"></i>See Stock</a></h2>
+                  </div>
+                </div>
+          
+            </div>
+
+            <h4 class="m-4">Out Of Stock</h4>
+            <table class="table table-hover">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">In Stock</th>
+                    <th scope="col">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td><button class="btn btn-success">In Stock</button></td>
+                    <td><button class="btn btn-danger">Remove</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td><button class="btn btn-success">In Stock</button></td>
+                    <td><button class="btn btn-danger">Remove</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td><button class="btn btn-success">In Stock</button></td>
+                    <td><button class="btn btn-danger">Remove</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td><button class="btn btn-success">In Stock</button></td>
+                    <td><button class="btn btn-danger">Remove</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td><button class="btn btn-success">In Stock</button></td>
+                    <td><button class="btn btn-danger">Remove</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+    </div>
+
+    <script src="/components/js/index.js"> </script>
+</body>
+</html>
